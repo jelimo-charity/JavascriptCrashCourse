@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Arrays</title></head>
+<body>
+    <p id="demo">My working space on Arrays</p>
+   <script>
+    //let cars = ['bmw','volvo','honda'];
+        //⬇️array opeerations⬇️
+
+    //1. display the array
+    //document.getElementById('demo').innerHTML = cars;
+
+    //2. display array length
+    //let arrayLenght = cars.length;
+    //document.getElementById('demo').innerHTML = arrayLenght;
+
+    //3. access the last array element
+    // let lastarrayelement = cars[cars.length -1];
+    // document.getElementById('demo').innerHTML = lastarrayelement;
+    
+    //4. loop over an array item
+        // cars.forEach((car,index) => {
+        //     console.log(`indexno:${index} , elementname:${car}`);
+        // });
+
+        //⬇️array operations⬇️
+
+    //1. toString(): Convert an array into string
+    // let convertedstringrray = cars.toString();
+    // document.getElementById('demo').innerHTML = convertedstringrray;
+    // console.log(typeof(convertedstringrray));
+
+    //2. pop(): removes the last item from an array
+    // let removedItem = cars.pop();
+    // document.getElementById('demo').innerHTML = cars;
+    // console.log(`the removed element is ${removedItem} from array ${cars}`);
+
+    //2. pop(): removes the last item from an array
+    // let removedItem = cars.pop();
+    // document.getElementById('demo').innerHTML = cars;
+    // console.log(`the removed element is ${removedItem} from array ${cars}`);
+
+    //2. push(): adds an element at the end of array
+    // let lastAddedElementIndex = cars.push("Toyota");
+    // document.getElementById('demo').innerHTML = lastAddedElement;
+    // console.log(`the last Added Element at the end of the array is ${cars[cars.length -1]} from array ${cars}`);
+    
+    //3. unshift(): adds an element at the beginning of an array
+    //let firstAddedElementIndex = cars.unshift("bugati");
+    //document.getElementById('demo').innerHTML = firstAddedElementIndex;
+    //console.log(`the first Added Element at the begining of the array is ${cars[0]} from array ${cars}`);
+    
+    //4. shift(): removes an element at the beginning of an array
+    // let firstRemovedElement = cars.shift();
+    // document.getElementById('demo').innerHTML = firstRemovedElement;
+    // console.log(`the first removed Element at the begining of the array is ${cars[0]} from array ${cars}`);
+
+    //4. concat(): creates a new array by merging existing two arrays
+    //  let bikes = ['yamaha','suzuki','TVS','boxer'];
+    //  let  mergedNewArray = cars.concat(bikes)
+    //  console.log(`array 1 is ${cars} and array two is ${bikes} and merged array is ${mergedNewArray}`);
+
+    //4. sort(): sorts an array in ascending order
+    // let bikes = ['yamaha','suzuki','tvs','boxer'];
+    // let  sortedArray = bikes.sort();
+    // document.getElementById('demo').innerHTML = bikes.sort();      
+            //the sort methods misbehaves on various areas like using caps in strings and using console method
+    
+    //5. reverse(): sorts an array in reverse order of the curret order of the array
+    // let bikes = ['yamaha','suzuki','tvs','boxer'];
+    // let  reverseSortedArray = bikes.reverse();
+    // document.getElementById('demo').innerHTML =  reverseSortedArray;     
+         
+            //⬇️Map , Reduce , Filter⬇️
+
+    //1. Array.map(): creats a new array and performs a function on each array element
+    //let numbers = [1,2,3,4];
+           // option 1
+    // let  mappedArray = numbers.map(multiply)
+    // function multiply(value) {
+    //   return value * 2;  
+    // }
+         // option 2
+    // let mappedArray = numbers.map((num) => {
+    //     return num * 2;  
+    // })
+    // document.getElementById('demo').innerHTML =  mappedArray;
+     
+    //2.Array.filter() it takes each element in an array and it
+    // applies a condtional statement against it
+    // let numbers = [1,2,3,4];
+    // let numbersGreaterThanTwo = numbers.filter(greaterThanTwo);
+    //      // option 1
+    //  function greaterThanTwo(params) {
+    //      return params > 2;
+    //  }
+    //  document.getElementById('demo').innerHTML =  numbersGreaterThanTwo;
+        // option 2
+    // let numbersGreaterThanTwo = numbers.filter((num) => {
+    //     return num > 2;
+    // })
+    // document.getElementById('demo').innerHTML =  numbersGreaterThanTwo;
+    //3.Array.reduce() it reduces an array of values down to just one 
+    // value using a function
+    //let numbers = [1,2,3,4];
+        // option 1
+    // let reducedValue = numbers.reduce(sum);
+    // function sum(total,value) {
+    //     return total+value;
+    // }
+    // document.getElementById('demo').innerHTML = reducedValue;
+        // option 2
+    // let reducedValue = numbers.reduce((total,value) => {
+    //     return total+value;
+    // });
+    // document.getElementById('demo').innerHTML = reducedValue;
+   </script> 
+</body>
+</html>

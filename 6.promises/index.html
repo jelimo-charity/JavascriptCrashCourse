@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Promises</title></head>
+<body>
+    <p id="demo">My working space on Promises</p>
+    <script>
+            //promise => an asynchronous action that may complete at some point in the future an produce a value
+        // states of a promise
+            //1. pending => underlying ops has not yet completed
+            //2.fulfilled => the ops has finished and the promise is fullfilled with a value
+            //3.rejected => An error has occured during the ops and promise is rejected witha reason.
+//syntax 1
+    //   let car = new Promise(function(resolve,reject){
+    //         fuel_fullTank = true;
+    //         if (fuel_fullTank) {
+    //             resolve();
+    //         } else {
+    //             reject();
+    //         }
+    //   });
+    //   car.then(function() {
+    //      document.getElementById("demo").innerHTML = 'the fuel tank is full.happy driving';
+    //   }).catch(function() {
+    //     document.getElementById("demo").innerHTML = 'the fuel tank is empty.Refuel needed ASAP!!';        
+    //   });
+//syntax 2
+    //     let car = new Promise(function(resolve,reject){
+    //         fuel_fullTank = true;
+    //         if (fuel_fullTank) {
+    //             resolve();
+    //         } else {
+    //             reject();
+    //         }
+    //   }).then(function() {
+    //      document.getElementById("demo").innerHTML = 'the fuel tank is full.happy driving';
+    //   }).catch(function() {
+    //     document.getElementById("demo").innerHTML = 'the fuel tank is empty.Refuel needed ASAP!!';        
+    //   });
+    //Nested promises
+    let empty_tank = function () {
+        return new Promise(function (resolve,reject) {
+            resolve("The car doesnt have enough fuel.");
+        })
+    }
+    let engine = function (msg) {
+        return new Promise(function (resolve,reject) {
+            resolve(msg + "The engine is overheating.");
+        })
+    }
+    let travel = function (msg) {
+        return new Promise(function (resolve,reject) {
+            resolve(msg + "The car is not safe for traveling.");
+        })
+    }
+
+    empty_tank().then(function (result) {
+        return engine(result)
+    }).then(function (result) {
+        return travel(result)
+    }).then(function(result){
+        // console.log("done!" + result)
+        document.getElementById("demo").innerHTML = result;
+    })
+
+    </script>
+</body>
+</html>

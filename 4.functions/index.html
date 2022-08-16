@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Functions</title></head>
+<body>
+    <p id="demo">My working space on Functions</p>
+    <script>
+            // creating a Function
+        // function square(params) {
+        //     return params * params;
+        // }    
+        // document.getElementById("demo").innerHTML = 'The square of '+5+ ' is ' +square(5);      
+            // creating a Function using a constructor
+        // let sum = new Function ("a","b", "return a + b");
+        // document.getElementById("demo").innerHTML = sum(5,4);    
+            //self invorking functions =>the function is executed automatically
+        // ( function () {
+        //         return document.getElementById("demo").innerHTML = "Hello everyone, it's good to be back."
+        // })();
+            //function as a value
+        // function product(a,b){
+        //     return a*b;
+        // }
+        // let x = product(5,4);
+        // document.getElementById("demo").innerHTML = 'the sum of 5 and 4 is '+x;
+            //functions as objects
+        // let body ="return Math.PI * rad*rad";
+        // let circle = new Function("rad",body);
+        // alert(circle(5));
+            // arrow functions
+        // let sum = (a,b) => a+b;
+        // alert("the sum of 5,4 is "+sum(5,4));
+            //generator functions => regular functions return a single or no value.Generator can yield multiple values one after another,on demand
+        // function* generateThreeNumbers(){
+        //     yield 1;
+        //     yield 2;
+        //     return 3;
+        // }
+        // let generate = generateThreeNumbers();
+        // let one = generate.next();
+        // let two = generate.next();
+        // let three = generate.next();
+        // console.log(JSON.stringify(one));
+        // console.log(JSON.stringify(two));
+        // console.log(JSON.stringify(three));
+            //predefined functions
+            //1. eval => evaluates a string and returns a value
+                let x= 3;
+                let y= 4;
+                let z= 7;
+                console.log(eval("x+y+z")); //output the value of y+x+z
+                console.log(eval(z)); //output the value of z
+
+            //2. parseInt => parses a string argument and returns a integer of the specified radix or base
+            //3. escape => returns the hexadecimal encording of an argument
+            //4. unescape => returns the ASCII string for the specified value 
+
+    </script>
+</body>
+</html>

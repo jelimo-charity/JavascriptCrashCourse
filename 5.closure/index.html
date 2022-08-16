@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Closure</title></head>
+<body>
+    <p id="demo">My working space on Closure</p>
+    <script>
+        //closure => js feature where inner functions has access to the outer functions variables
+      let a = 21;
+      function first() {
+        let b = 54;
+        function second() {
+            let c = 20 + a + b;
+            return c;
+        }
+        return second();
+      }
+      let sum = first();
+      console.log(sum);
+      document.getElementById("demo").innerHTML = 'the sum of a,b,c is ' +sum;
+
+    </script>
+</body>
+</html>

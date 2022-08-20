@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>this keyword</title></head>
+<body>
+    <p id="demo">My working space on this keyword</p>
+    <script>
+     // This keyword refers to the object whis is executing the current piece of code
+        // var value = 50;
+        // function getMyValue(){
+        //   var value = 100;
+        //   console.log("Value: "+ value);
+        //   console.log("This Value: "+ this.value);
+        // }
+        // getMyValue();
+        const randomPerson = {
+            name: "kevin",
+            get getName(){
+              return this.name;
+            },
+            set setName(value){
+              return  this.name = value;
+            }
+        }
+        randomPerson.setName = "daniel ngao";
+        console.log("My name is "+randomPerson.getName);
+    </script>
+</body>
+</html>
